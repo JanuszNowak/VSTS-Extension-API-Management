@@ -1,0 +1,1 @@
+npm install -g tfx-clinpm install -g tfx-cli
