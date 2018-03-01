@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "DevOpsAzureAndVstsExtension",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "name": "DevOpsAzureAndVstsExtension",
     "description": "Visual Studio Services extension with multiple tasks for Azure.",
     "publisher": "janono",
@@ -34,7 +34,7 @@
                 "ms.vss-distributed-task.tasks"
             ],
             "properties": {
-                "name": "buildAndReleaseTask"
+                "name": "Tasks/ApiManagementTask"
             }
         }
     ],
@@ -43,5 +43,10 @@
         "vso.release"
     ],
     "files": [        
+        {
+            "path": "Tasks",
+            "addressable": true,
+            "packagePath": "Tasks"
+        }
     ]
 }
