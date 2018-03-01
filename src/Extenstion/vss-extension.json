@@ -1,0 +1,47 @@
+{
+    "manifestVersion": 1,
+    "id": "DevOpsAzureAndVstsExtension",
+    "version": "0.1.0",
+    "name": "DevOpsAzureAndVstsExtension",
+    "description": "Visual Studio Services extension with multiple tasks for Azure.",
+    "publisher": "janono",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+            }
+        ],
+    "icons": {
+         "default": "images/icon.png"
+     },
+    "contributions": [
+        {
+            "id": "Fabrikam.HelloWorld",
+            "type": "ms.vss-web.hub",
+            "description": "Adds a 'Hello' hub to the Work hub group.",
+            "targets": [
+                "ms.vss-work-web.work-hub-group"
+                ],
+            "properties": {
+                "name": "Hello",
+                "order": 99,
+                "uri": "hello-world.html"
+            }
+        },
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "buildAndReleaseTask"
+            }
+        }
+    ],
+    "scopes": [
+        "vso.work",
+        "vso.release"
+    ],
+    "files": [        
+    ]
+}
